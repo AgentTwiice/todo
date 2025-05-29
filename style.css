@@ -77,6 +77,18 @@ li {
   justify-content: space-between;
 }
 
+li .delete-task {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+li:hover .delete-task {
+  display: inline;
+}
+
 .add-task,
 .chat-input {
   display: flex;
