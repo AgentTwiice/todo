@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Todo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>AI Todo List</h1>
+  </header>
+  <main class="container">
+    <section class="todo-section">
+      <h2>Your Tasks</h2>
+      <ul id="todo-list"></ul>
+      <div class="add-task">
+        <input type="text" id="task-input" placeholder="Add a task" />
+        <button id="add-task">Add</button>
+      </div>
+    </section>
+    <section class="chat-section">
+      <h2>AI Assistant</h2>
+      <div id="chat-log" class="chat-log"></div>
+      <div class="chat-input">
+        <input type="text" id="chat-message" placeholder="Ask the AI..." />
+        <button id="send-chat">Send</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
