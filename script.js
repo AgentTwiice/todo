@@ -1,4 +1,4 @@
-(function() {
+document.addEventListener('DOMContentLoaded', () => {
   const todoList = document.getElementById('todo-list');
   const taskInput = document.getElementById('task-input');
   const addTaskBtn = document.getElementById('add-task');
@@ -46,4 +46,4 @@
     chatLog.appendChild(div);
     chatLog.scrollTop = chatLog.scrollHeight;
   }
-})();
+});
