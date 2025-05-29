@@ -1,0 +1,87 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.todo-section, .chat-section {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.todo-section {
+  border-right: 1px solid #e5e5e5;
+}
+
+h1, h2 {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background: #fff;
+  margin-bottom: .5rem;
+  padding: .75rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-task,
+.chat-input {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.add-task input,
+.chat-input input {
+  flex: 1;
+  padding: .5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-task button,
+.chat-input button {
+  margin-left: .5rem;
+  padding: .5rem 1rem;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-log {
+  background: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: .5rem;
+}
+
