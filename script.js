@@ -6,6 +6,12 @@
   const chatLog = document.getElementById('chat-log');
   const chatInput = document.getElementById('chat-message');
   const chatBtn = document.getElementById('send-chat');
+  const themeToggle = document.getElementById('toggle-theme');
+
+  // respect saved theme
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+  }
 
   // basic add task functionality
   addTaskBtn.addEventListener('click', () => {
@@ -15,6 +21,12 @@
     li.textContent = text;
     todoList.appendChild(li);
     taskInput.value = '';
+  });
+
+  // toggle dark mode
+  themeToggle.addEventListener('click', () => {
+    const dark = document.body.classList.toggle('dark');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
   });
 
   // stubbed chat interaction
