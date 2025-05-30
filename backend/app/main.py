@@ -1,7 +1,9 @@
 from uuid import UUID
 
 from fastapi import FastAPI, Request
+from fastapi.staticfiles import StaticFiles
 from sqlmodel import Session
+import os
 
 from .auth import router as auth_router
 from .tasks import router as tasks_router
@@ -12,6 +14,9 @@ from .utils import decode_access_token
 app = FastAPI()
 app.include_router(auth_router)
 app.include_router(tasks_router)
+
+STATIC_DIR = os.path.join(os.path.dirname(__file__), "..", "static")
+app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="frontend")
 
 
 @app.middleware("http")
