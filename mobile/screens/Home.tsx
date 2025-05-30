@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, ScrollView, Text, ActivityIndicator, StyleSheet } from 'react-native';
+import { Card } from '../ui/components';
 import BigCalendar, { Event as CalendarEvent } from 'react-native-big-calendar';
 import { fetchTasks, syncGoogleEvents, Task } from '../apiClient';
 
@@ -56,9 +57,11 @@ export default function Home() {
       <BigCalendar events={events} height={400} />
       <ScrollView style={styles.list}>
         {tasks.map(task => (
-          <Text key={task.id} style={{ color: priorityColors[task.priority] }}>
-            {task.title}
-          </Text>
+          <Card key={task.id}>
+            <Text style={{ color: priorityColors[task.priority] }}>
+              {task.title}
+            </Text>
+          </Card>
         ))}
       </ScrollView>
     </View>
