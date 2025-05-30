@@ -4,12 +4,14 @@ from fastapi import FastAPI, Request
 from sqlmodel import Session
 
 from .auth import router as auth_router
+from .tasks import router as tasks_router
 from .database import engine
 from .models import User
 from .utils import decode_access_token
 
 app = FastAPI()
 app.include_router(auth_router)
+app.include_router(tasks_router)
 
 
 @app.middleware("http")
